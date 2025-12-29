@@ -39,3 +39,7 @@ def generate(req: GenerateRequest):
     
 @app.get("/health") 
 def health(): return {"ok": True}
+
+@app.get("/")
+def read_root():
+    return {"status": "ok", "message": "FastAPI is running!"}
