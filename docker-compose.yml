@@ -10,3 +10,10 @@ services:
       - OLLAMA_API=http://host.docker.internal:11434
     extra_hosts:
       - 'host.docker.internal:host-gateway'
+    networks:
+      - default
+      - sp-backend_appnet
+
+networks:
+  sp-backend_appnet:
+    external: true
