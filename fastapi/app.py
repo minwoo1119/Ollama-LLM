@@ -15,7 +15,7 @@ app.add_middleware(
     allow_credentials=False, 
 )
 
-OLLAMA_API = os.getenv("OLLAMA_API", "http://localhost:11434")
+OLLAMA_API = os.getenv("OLLAMA_API", "http://172.17.0.1:11434")
 
 class GenerateRequest(BaseModel):
     prompt: str
